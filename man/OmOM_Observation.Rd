@@ -20,7 +20,7 @@ Objects can be created by calls of the form \code{new("OmOM_Observation", ...)}.
 }
 \section{Slots}{
   \describe{
-    \item{\code{samplingTime}:}{Object of class \code{"GmlTimeObjectOrNULL"}: The time that the result applies to the feature-of-interest. This is the time usually required for geospatial analysis of the result.}
+    \item{\code{phenomenonTime}:}{Object of class \code{"GmlTimeObjectOrNULL"}: The time that the result applies to the feature-of-interest. This is the time usually required for geospatial analysis of the result. Note: The phenomenonTime has been renamed to samplingTime in the O&M specification version 2.0. However, in order to be consistent with version 1.0 in SOS4R, we decided to leave the slot as is and just changed the parsing/encoding.}
     \item{\code{procedure}:}{Object of class \code{"ANY"}: The description of a process used to generate the result. It must be suitable for the observed property.}
     \item{\code{observedProperty}:}{Object of class \code{"SwePhenomenonProperty"}: Identifies or describes the phenomenon for which the observation result provides an estimate of its value. It must be a property associated with the type of the feature of interest.}
     \item{\code{featureOfInterest}:}{Object of class \code{"GmlFeature"}: A feature of any type (ISO 19109, ISO 19101), which is a representation of the observation target, being the real-world object regarding which the observation is made.}
